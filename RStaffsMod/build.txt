@@ -1,5 +1,0 @@
-displayName = Alternative Gem Staffs
-author = Kire Leag
-version = 1.1
-includePDB = true
-homepage = https://forums.terraria.org/index.php?threads/alternative-gem-staffs-mod.107473/
