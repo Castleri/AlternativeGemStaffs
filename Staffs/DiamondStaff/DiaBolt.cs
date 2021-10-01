@@ -9,6 +9,11 @@ namespace RStaffsMod.Staffs.DiamondStaff
 {
     public class DiaBolt : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.Homing[projectile.type] = true;
+        }
+        
         public override void SetDefaults()
         {
             projectile.friendly = true;
@@ -58,21 +63,18 @@ namespace RStaffsMod.Staffs.DiamondStaff
                     if (targetfound)
                     {
                         projectile.velocity = ((Vector2.Normalize(targetcenter - projectile.Center)) + projectile.oldVelocity * 0.87f);
-                        if (projectile.velocity.Y > 6.5f)
+
+                        float velx = Math.Abs(projectile.velocity.X);
+                        float vely = Math.Abs(projectile.velocity.Y);
+                        if (velx > 6.5f)
                         {
-                            projectile.velocity.Y = 6.5f;
+                            float direction = Math.Abs(projectile.velocity.X) / projectile.velocity.X;
+                            projectile.velocity.X = 6.5f * direction;
                         }
-                        else if (projectile.velocity.Y < -6.5f)
+                        if (vely > 6.5f)
                         {
-                            projectile.velocity.Y = -6.5f;
-                        }
-                        if (projectile.velocity.X > 6.5f)
-                        {
-                            projectile.velocity.X = 6.5f;
-                        }
-                        else if (projectile.velocity.X < -6.5f)
-                        {
-                            projectile.velocity.X = -6.5f;
+                            float direction = Math.Abs(projectile.velocity.Y) / projectile.velocity.Y;
+                            projectile.velocity.Y = 6.5f * direction;
                         }
                     }
 
