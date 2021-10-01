@@ -16,3 +16,12 @@ Try them all and have fun
 This is my first mod, so I appreciate all the feedback you could give
 
 Please report any bugs you encounter
+
+
+Change Log
+
+- 1.2
+	Diamond Staff Damage increased  (14 -> 17)
+	Crawlers (Amber Staff) now have an indicator that tells how much damage they took
+	Sapphire Shield damage increased by 20%
+	Amethyst Crystals fall slower
