@@ -27,7 +27,7 @@ namespace RStaffsMod.Staffs.AmethystStaff
             projectile.ai[0]++;
             if (projectile.ai[0] >= 40)
             {
-                projectile.velocity.Y += 0.4f;
+                projectile.velocity.Y += 0.35f;
             }
             if (projectile.velocity.Y >= 14.5f)
             {
