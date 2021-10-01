@@ -65,7 +65,7 @@ namespace RStaffsMod
                     item.knockBack = 6.25f;
                     break;
                 case 744:
-                    item.damage = 14;
+                    item.damage = 17;
                     item.useAnimation = 21;
                     item.useTime = 21;
                     item.shoot = ModContent.ProjectileType<Staffs.DiamondStaff.DiaBolt>();
