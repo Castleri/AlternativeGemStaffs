@@ -116,13 +116,17 @@ namespace RStaffsMod.Staffs.AmberStaff
                 default:
                     if (crit)
                     {
-                        projectile.ai[1] += (int)(damage * 1.5f);
-                        projectile.timeLeft -= (int)(damage * 1.5f);
+                        float damage1 = damage * 1.5f;
+                        projectile.ai[1] += (int)damage1;
+                        projectile.timeLeft -= (int)damage1;
+                        CombatText.NewText(new Rectangle((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height), Color.Red, (int)damage1);
                     }
                     else
                     {
-                        projectile.ai[1] += (damage * 3);
-                        projectile.timeLeft -= (damage * 3);
+                        float damage1 = damage * 3;
+                        projectile.ai[1] += damage1;
+                        projectile.timeLeft -= (int)damage1;
+                        CombatText.NewText(new Rectangle((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height), Color.OrangeRed, (int)damage1);
                     }
                     break;
             }
